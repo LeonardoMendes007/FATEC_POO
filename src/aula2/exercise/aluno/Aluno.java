@@ -44,7 +44,7 @@ public class Aluno {
 
 	public void exibir() {
 		
-		System.out.println("id=" + id + ", nome=" + nome + ", ra=" + ra + ", nascimento=" + nascimento); 
+		System.out.println("id=" + id + ", nome=" + nome + ", ra=" + ra + ", nascimento=" + GestaoAlunos.formato.format(nascimento)); 
 		
 	}
 	

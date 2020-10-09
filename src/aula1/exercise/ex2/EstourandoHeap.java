@@ -9,8 +9,8 @@ public class EstourandoHeap {
 		
 		List<String> lista = new ArrayList<>();
         while (true) {
-           String o = new String("Oloco");
-           lista.add(o);
+           
+           lista.add(new String("Oloco"));
         }
         
 	}
