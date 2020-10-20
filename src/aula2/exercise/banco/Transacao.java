@@ -6,10 +6,13 @@ public class Transacao {
 	
 	private float valor;
 	private Date data;
-	private Pagamento pagamento;
-	private Deposito deposito;
-	private Saque saque;
 	
+	
+	public Transacao(float valor, Date data) {
+		super();
+		this.valor = valor;
+		this.data = data;
+	}
 	
 	public float getValor() {
 		return valor;
@@ -23,31 +26,5 @@ public class Transacao {
 	public void setData(Date data) {
 		this.data = data;
 	}
-	
-	public Pagamento getPagamento() {
-		return pagamento;
-	}
-	
-	public void setPagamento(Pagamento pagamento) {
-		this.pagamento = pagamento;
-	}
-	
-	public Deposito getDeposito() {
-		return deposito;
-	}
-	
-	public void setDeposito(Deposito deposito) {
-		this.deposito = deposito;
-	}
-	
-	public Saque getSaque() {
-		return saque;
-	}
-	
-	public void setSaque(Saque saque) {
-		this.saque = saque;
-	}
-
-	
 	
 }

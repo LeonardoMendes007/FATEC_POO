@@ -1,0 +1,11 @@
+Cavaleiro - interface
+Diplmata - interface
+Principe - classe
+Rainha - classe
+Conde - classe
+Soldado - classe
+Nobre - classe 
+Conselheiro - classe
+Bispo - classe
+Padre - classe
+Fiel - interface

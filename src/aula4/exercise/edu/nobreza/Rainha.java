@@ -1,9 +1,9 @@
 package aula4.exercise.edu.nobreza;
 
-public class Principe extends Nobre implements Cavaleiro{
+public class Rainha extends Nobre implements Diplomata{
 
 	@Override
-	public void duelar() {
+	public void fazerDiplomacia() {
 		// TODO Auto-generated method stub
 		
 	}

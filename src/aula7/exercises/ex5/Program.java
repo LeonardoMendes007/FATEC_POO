@@ -1,6 +1,7 @@
 package aula7.exercises.ex5;
 
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -63,7 +64,7 @@ public class Program extends Application {
 		tileCenter.setHgap(5);
 		
 		
-		FT minMax = (s) -> {
+		Function<String, Button> criaButton = (s) -> {
 			
 			Button bt = new Button(s);
 			bt.setMaxWidth(60);
@@ -74,10 +75,10 @@ public class Program extends Application {
 			return bt;
 		};
 		
-		tileCenter.getChildren().addAll(btNum[1],btNum[2],btNum[3],minMax.minMax("+"));
-		tileCenter.getChildren().addAll(btNum[4],btNum[5],btNum[6],minMax.minMax("-"));
-		tileCenter.getChildren().addAll(btNum[7],btNum[8],btNum[9],minMax.minMax("*"));
-		tileCenter.getChildren().addAll(minMax.minMax("."),btNum[0],minMax.minMax("="),minMax.minMax("/"));
+		tileCenter.getChildren().addAll(btNum[1],btNum[2],btNum[3],criaButton.apply("+"));
+		tileCenter.getChildren().addAll(btNum[4],btNum[5],btNum[6],criaButton.apply("-"));
+		tileCenter.getChildren().addAll(btNum[7],btNum[8],btNum[9],criaButton.apply("*"));
+		tileCenter.getChildren().addAll(criaButton.apply("."),btNum[0],criaButton.apply("="),criaButton.apply("/"));
 		
 		
 		painel.setCenter(tileCenter);
