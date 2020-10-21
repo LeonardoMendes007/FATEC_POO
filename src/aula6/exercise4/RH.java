@@ -3,8 +3,6 @@ package aula6.exercise4;
 import java.util.HashSet;
 import java.util.Set;
 
-import aula6.exercise3.Funcionario;
-
 
 
 public class RH implements IRH {
@@ -13,14 +11,26 @@ public class RH implements IRH {
 
 	@Override
 	public double valorBonus(Funcionario funcionario) {
+		
+		double percent = 0;
 	    
 	    if(funcionario.getFaltasNoAno() < 2) {
-	    	return funcionario.getSalario()*0.30;
+	    	percent = 0.30;
 	    }else if(funcionario.getFaltasNoAno() <= 4) {
-	    	return funcionario.getSalario()*0.15;
+	    	percent = 0.15;
 	    }else {
-	    	return funcionario.getSalario()*0.05;
+	    	percent = 0.05;
 	    }
+	    
+	    if(funcionario.getUltimaNotaAvaliacao() > 7) {
+	    	percent += 0.30;
+	    }else if(funcionario.getUltimaNotaAvaliacao() >= 5) {
+	    	percent += 0.15;
+	    }else {
+	    	percent += 0.05;
+	    }
+	    
+	    return (percent*funcionario.getSalario());
 	    
 	}
 
@@ -56,6 +66,8 @@ public class RH implements IRH {
 		}
 		
 	}
+	
+	
 
 	
 }

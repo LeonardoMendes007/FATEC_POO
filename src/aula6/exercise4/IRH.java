@@ -1,6 +1,5 @@
 package aula6.exercise4;
 
-import aula6.exercise3.Funcionario;
 
 public interface IRH {
 	

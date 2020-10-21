@@ -7,7 +7,7 @@ import java.util.function.Predicate;
 
 public class GestaoAlunos {
 
-	static SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+	public static SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 	static Scanner scan = new Scanner(System.in);
 
 	Predicate<Aluno> pred;

@@ -14,14 +14,17 @@ public class Funcionario {
     private String nomeFaculdade;
     private String nomeCurso;
     
-    
-    
+	public Funcionario() {
+		super();
+	}
+
 	public Funcionario(String nome, double salario, int faltasNoAno) {
 		super();
 		this.nome = nome;
 		this.salario = salario;
 		this.faltasNoAno = faltasNoAno;
 	}
+	
 	public long getId() {
 		return id;
 	}
